@@ -33,9 +33,9 @@ const FeaturedAuthors = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24  bg-gray-50">
       <div className="max-w-7xl mx-auto px-5">
-        <div className="text-center mb-14">
+        <div className="text-center mb-20">
           <p className="text-green-600 font-bold text-sm tracking-wider uppercase">
             Meet Our Writers
           </p>
@@ -73,7 +73,7 @@ const FeaturedAuthors = () => {
             }}
           >
             {authors.map((author) => (
-              <SwiperSlide key={author.id || author.author_id}>
+              <SwiperSlide key={author.id || author.author_id} className="mb-10">
                 <AuthorCard author={author} />
               </SwiperSlide>
             ))}

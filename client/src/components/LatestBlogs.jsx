@@ -29,7 +29,7 @@ const LatestBlogs = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-5">
         <div className="flex justify-between items-center mb-14">
           <div>

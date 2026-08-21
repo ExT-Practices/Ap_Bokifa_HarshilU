@@ -51,61 +51,6 @@ function Books() {
   return (
     <div className="bg-gray-50 min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-5">
-        {/* Banner */}
-        <div className="bg-gradient-to-r from-emerald-800 via-teal-900 to-slate-900 text-white rounded-3xl p-10 mb-10 shadow-xl relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl">
-            <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest bg-emerald-500/20 px-3 py-1 rounded-full border border-emerald-500/30">
-              Live Bookstore Catalog
-            </span>
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold mt-4">
-              Explore Our Collection
-            </h1>
-            <p className="text-slate-300 text-sm mt-3">
-              Discover timeless classics, bestsellers, non-fiction guides, and technical literature carefully curated for passionate readers.
-            </p>
-          </div>
-        </div>
-
-        {/* Search & Filter Bar */}
-        <div className="bg-white p-5 rounded-2xl shadow-sm mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="relative w-full md:w-96">
-            <FiSearch className="absolute left-4 top-3.5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search by book title or author..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 text-sm rounded-xl pl-11 pr-4 py-3 outline-none focus:border-green-600 transition"
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-            <select
-              value={selectedAuthor}
-              onChange={(e) => setSelectedAuthor(e.target.value)}
-              className="bg-gray-50 border border-gray-200 text-sm text-gray-700 rounded-xl px-4 py-3 outline-none focus:border-green-600"
-            >
-              <option value="">All Authors</option>
-              {authorsList.map((author, idx) => (
-                <option key={idx} value={author}>
-                  {author}
-                </option>
-              ))}
-            </select>
-
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="bg-gray-50 border border-gray-200 text-sm text-gray-700 rounded-xl px-4 py-3 outline-none focus:border-green-600"
-            >
-              <option value="default">Sort by Default</option>
-              <option value="low-high">Price: Low to High</option>
-              <option value="high-low">Price: High to Low</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Content */}
         {loading ? (
           <div className="text-center py-20">
             <div className="w-10 h-10 border-4 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>

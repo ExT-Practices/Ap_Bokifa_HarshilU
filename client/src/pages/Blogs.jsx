@@ -40,39 +40,6 @@ function Blogs() {
   return (
     <div className="bg-gray-50 min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-5">
-        {/* Banner */}
-        <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-10 mb-10 shadow-xl">
-          <div className="max-w-2xl">
-            <span className="text-purple-400 text-xs font-bold uppercase tracking-widest bg-purple-500/20 px-3 py-1 rounded-full border border-purple-500/30">
-              Literary Insights & News
-            </span>
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold mt-4">
-              Bookify Blog & Articles
-            </h1>
-            <p className="text-slate-300 text-sm mt-3">
-              Reading recommendations, author interviews, literary trends, and habit building tips written by book lovers.
-            </p>
-          </div>
-        </div>
-
-        {/* Search */}
-        <div className="bg-white p-5 rounded-2xl shadow-sm mb-8 flex items-center justify-between">
-          <div className="relative w-full max-w-md">
-            <FiSearch className="absolute left-4 top-3.5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search articles by topic or author..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 text-sm rounded-xl pl-11 pr-4 py-3 outline-none focus:border-purple-600 transition"
-            />
-          </div>
-          <p className="text-xs text-gray-400 font-semibold hidden sm:block">
-            Showing {filteredBlogs.length} published articles
-          </p>
-        </div>
-
-        {/* Articles List */}
         {loading ? (
           <div className="text-center py-20">
             <div className="w-10 h-10 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
